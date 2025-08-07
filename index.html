@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LançaFlash - Lançamentos para Vendas Explosivas</title>
+    <meta name="description" content="Aprenda a envolver sua galera, validar ideias e faturar alto no seu primeiro lançamento com o curso LançaFlash.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        :root {
+            --primary: #FF595E;
+            --secondary: #1982C4;
+            --neutral-text: #1E1E1E;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--neutral-text);
+        }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .border-primary { border-color: var(--primary); }
+        .shadow-custom { box-shadow: 0 4px 14px 0 rgba(0,0,0,0.08); }
+        .shadow-custom-hover:hover { box-shadow: 0 6px 20px 0 rgba(0,0,0,0.12); }
+        .countdown-box {
+            text-align: center;
+            padding: 0.5rem 0.75rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            min-width: 60px;
+        }
+        .countdown-box span { display: block; }
+        .countdown-number { font-size: 1.75rem; line-height: 2rem; font-weight: 700; }
+        .countdown-label { font-size: 0.75rem; line-height: 1rem; font-weight: 400; text-transform: uppercase; }
+        .keen-slider__slide {
+            min-width: 100%!important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" x-data="pageSetup()">
+
+    <header class="bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-40 shadow-sm" x-data="{ atTop: true }" @scroll.window="atTop = (window.scrollY > 10) ? false : true" :class="{ 'shadow-md': !atTop }">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 14 3 6 3-6-3-14Z"/><path d="M2 13h20"/><path d="M17.8 17.8 16 22l-4-4 4-4 1.8 1.8Z"/><path d="m6.2 6.2 1.8 1.8 4-4-4-4-1.8 1.8Z"/></svg>
+                <span class="text-2xl font-bold text-neutral-text">Lança<span class="text-primary">Flash</span></span>
+            </a>
+            <a href="#oferta" class="hidden md:inline-block bg-primary text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-700 transition-all shadow-custom shadow-custom-hover">
+                Quero começar meu lançamento hoje
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pt-28 pb-16 md:pt-36 md:pb-24 text-center bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-bold !leading-tight max-w-3xl mx-auto">
+                    Lançamentos fracos viram <span class="text-primary">vendas explosivas</span> em apenas 7 dias!
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Aprenda a envolver sua galera, validar ideias e faturar alto no seu primeiro lançamento.
+                </p>
+                <a href="#oferta" class="mt-8 inline-block bg-primary text-white font-bold px-10 py-4 rounded-lg text-lg hover:bg-red-700 transition-all transform hover:scale-105 shadow-custom shadow-custom-hover">
+                    QUERO MEU LANÇAMENTO LUCRATIVO
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">O que é o Lança<span class="text-primary">Flash</span>?</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        LançaFlash é um curso online super prático que te ensina, em 5 fases de mestre, a criar lançamentos lucrativos sem dor de cabeça. Em videoaulas rapidinhas, você vai validar sua oferta, engajar sua galera e usar modelos prontos pra disparar vendas automáticas. E ainda ganha acesso ao grupinho VIP de alunos e Q&A ao vivo, garantindo suporte total até você ver o caixa bombar de verdade.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://placehold.co/400x400/FF595E/FFFFFF?text=🚀" alt="Ilustração de um foguete decolando, simbolizando o rápido avanço proporcionado pelo curso LançaFlash." class="rounded-lg shadow-lg" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl font-bold">Transforme sua ideia em <span class="text-secondary">lucro real</span></h2>
+                    <p class="mt-3 text-gray-600">Veja como você vai decolar suas vendas, mesmo começando do zero.</p>
+                </div>
+                <div class="mt-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-custom shadow-custom-hover transition-all">
+                        <span class="text-4xl">🔥</span>
+                        <p class="mt-4 font-semibold text-neutral-text">Tenha seu caixa bombando em apenas 7 dias com técnicas de pré-venda infalíveis.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-custom shadow-custom-hover transition-all">
+                        <span class="text-4xl">🚀</span>
+                        <p class="mt-4 font-semibold text-neutral-text">Dispare suas conversões para mais de 15% usando nossos roteiros de e-mail prontos.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-custom shadow-custom-hover transition-all">
+                        <span class="text-4xl">✅</span>
+                        <p class="mt-4 font-semibold text-neutral-text">Multiplique seu ROI em até 5× seguindo nosso passo a passo sem complicação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-secondary text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl font-bold">Quem aplicou, vendeu. E muito.</h2>
+                    <p class="mt-3 opacity-90">Resultados reais de alunos que confiaram no método LançaFlash.</p>
+                </div>
+                <div x-data="carousel()" x-init="init()" class="relative mt-12 max-w-3xl mx-auto">
+                    <div class="overflow-hidden" x-ref="slider">
+                        <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%)`">
+                            <div class="w-full flex-shrink-0">
+                                <div class="bg-white/10 p-8 rounded-lg text-center">
+                                    <p class="text-xl italic">“Antes do LançaFlash, meu lançamento rendeu R$ 2.300. No último, bati R$ 27.400 em vendas!”</p>
+                                    <p class="mt-4 font-bold">– Ana P., 31</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0">
+                                <div class="bg-white/10 p-8 rounded-lg text-center">
+                                    <p class="text-xl italic">“De 8 para 150 clientes em um ciclo: LançaFlash mudou meu faturamento!”</p>
+                                    <p class="mt-4 font-bold">– Bruno S., 42</p>
+                                </div>
+                            </div>
+                             <div class="w-full flex-shrink-0">
+                                <div class="bg-white/10 p-8 rounded-lg text-center">
+                                    <p class="text-xl italic">“O método é simples e direto ao ponto. Consegui meu primeiro 6 em 7 seguindo o passo a passo.”</p>
+                                    <p class="mt-4 font-bold">– Carla M., 28</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button @click="prev()" aria-label="Depoimento anterior" class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-12 bg-white/20 hover:bg-white/40 p-2 rounded-full transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button @click="next()" aria-label="Próximo depoimento" class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-12 bg-white/20 hover:bg-white/40 p-2 rounded-full transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="bg-gray-100 border border-gray-200 rounded-lg p-8 md:p-12 max-w-4xl mx-auto shadow-lg text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold">Esta oferta <span class="text-primary">expira em breve</span></h2>
+                    <p class="mt-2 text-gray-600">Garanta sua vaga antes que o contador zere e o preço suba.</p>
+                    
+                    <div x-data="countdown()" x-init="init()" class="mt-8 flex justify-center items-center space-x-2 md:space-x-4 text-white bg-secondary py-4 px-6 rounded-lg">
+                        <div class="countdown-box">
+                            <span x-text="days" class="countdown-number"></span>
+                            <span class="countdown-label">Dias</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span x-text="hours" class="countdown-number"></span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span x-text="minutes" class="countdown-number"></span>
+                            <span class="countdown-label">Minutos</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span x-text="seconds" class="countdown-number"></span>
+                            <span class="countdown-label">Segundos</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <p class="text-gray-600">Investimento único de <s class="text-red-500">R$ 597,00</s> por apenas:</p>
+                        <p class="text-4xl md:text-5xl font-bold my-2 text-primary">12x R$ 29,70</p>
+                        <p class="font-bold text-lg">ou R$ 297,00 à vista</p>
+                    </div>
+
+                    <div class="mt-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-md inline-block">
+                        <p class="font-bold">Restam apenas <span x-text="stock"></span> vagas!</p>
+                    </div>
+                    
+                    <a href="#" class="mt-8 w-full max-w-md mx-auto block bg-primary text-white font-bold px-10 py-4 rounded-lg text-xl hover:bg-red-700 transition-all transform hover:scale-105 shadow-custom shadow-custom-hover">
+                        GARANTIR MINHA VAGA AGORA
+                    </a>
+                    <img src="https://placehold.co/300x40/fafafa/1E1E1E?text=Compra+100%25+Segura" alt="Selo de compra 100% segura com ícones de cadeado e cartão de crédito." class="mx-auto mt-4" loading="lazy"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold">E ainda tem mais: <span class="text-secondary">Bônus Exclusivos</span></h2>
+                <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Comprando hoje você leva estes materiais de apoio para acelerar ainda mais seus resultados.</p>
+                <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-custom relative">
+                        <span class="absolute top-0 right-4 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Incluído grátis</span>
+                        <h3 class="text-xl font-bold flex items-center"><span class="text-2xl mr-3">🎁</span> Guia de Scripts VIP para pré-venda instantânea</h3>
+                        <p class="mt-2 text-gray-600">Copie e cole modelos de mensagens que geram desejo e antecipação para seu lançamento.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-custom relative">
+                        <span class="absolute top-0 right-4 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Incluído grátis</span>
+                        <h3 class="text-xl font-bold flex items-center"><span class="text-2xl mr-3">🎁</span> Mini-eBook “Gatilhos Mentais que Convertem”</h3>
+                        <p class="mt-2 text-gray-600">Entenda a psicologia por trás da compra e aplique os gatilhos certos para vender mais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-blue-50">
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 items-center max-w-4xl mx-auto">
+                <div class="flex justify-center md:justify-end">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-secondary opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                </div>
+                <div class="md:col-span-2 text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-secondary">Sua satisfação ou seu dinheiro de volta.</h2>
+                    <p class="mt-3 text-gray-700 leading-relaxed">Se em até 30 dias você achar que o LançaFlash não fez diferença, me envia um e-mail e te devolvo cada centavo. Sem burocracia, sem enrolação.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold">Perguntas Frequentes</h2>
+                    <p class="mt-3 text-gray-600">Ainda tem dúvidas? A gente te ajuda.</p>
+                </div>
+                <div class="mt-12 space-y-4" x-data="{ open: 1 }">
+                    <div class="bg-white border rounded-lg shadow-sm">
+                        <h2>
+                            <button type="button" class="flex items-center justify-between w-full p-6 font-semibold text-left" @click="open = (open === 1 ? 0 : 1)" :aria-expanded="open === 1">
+                                <span>Para quem é o curso LançaFlash?</span>
+                                <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 1}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                        </h2>
+                        <div x-show="open === 1" x-collapse class="p-6 pt-0 text-gray-600" aria-labelledby="faq1-button">
+                            <p>O curso é ideal para infoprodutores, freelancers, especialistas e qualquer pessoa que queira lançar um produto ou serviço digital e precisa de um método validado para gerar vendas rapidamente, mesmo com pouca ou nenhuma audiência.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded-lg shadow-sm">
+                        <h2>
+                            <button type="button" class="flex items-center justify-between w-full p-6 font-semibold text-left" @click="open = (open === 2 ? 0 : 2)" :aria-expanded="open === 2">
+                                <span>Preciso ter conhecimento prévio em marketing?</span>
+                                <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 2}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                        </h2>
+                        <div x-show="open === 2" x-collapse class="p-6 pt-0 text-gray-600" aria-labelledby="faq2-button">
+                            <p>Não! O LançaFlash foi desenhado para ser um passo a passo completo, do zero ao avançado. Usamos uma linguagem simples e fornecemos templates prontos para você apenas adaptar e usar.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border rounded-lg shadow-sm">
+                        <h2>
+                            <button type="button" class="flex items-center justify-between w-full p-6 font-semibold text-left" @click="open = (open === 3 ? 0 : 3)" :aria-expanded="open === 3">
+                                <span>Como funciona o acesso ao curso e aos bônus?</span>
+                                <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open === 3}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                        </h2>
+                        <div x-show="open === 3" x-collapse class="p-6 pt-0 text-gray-600" aria-labelledby="faq3-button">
+                            <p>O acesso é imediato após a confirmação do pagamento. Você receberá um e-mail com os dados para acessar a nossa área de membros, onde estarão todas as aulas, os bônus e o link para o grupo de alunos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-primary text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Pronto para fazer seu lançamento bombar?</h2>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+                    Chega de adiar seus resultados. A hora de faturar alto com seu conhecimento é agora.
+                </p>
+                <a href="#oferta" class="mt-8 inline-block bg-white text-primary font-bold px-10 py-4 rounded-lg text-lg hover:bg-gray-200 transition-all transform hover:scale-105 shadow-lg">
+                    Quero começar meu lançamento hoje
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-neutral-text text-white">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 LançaFlash. Todos os direitos reservados.</p>
+            <div class="mt-4 space-x-6">
+                <a href="#" class="hover:text-primary transition-colors">Política de Privacidade</a>
+                <span>|</span>
+                <a href="#" class="hover:text-primary transition-colors">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+    
+    <button @click="window.scrollTo({ top: 0, behavior: 'smooth' })" x-show="showBackToTop" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-4" class="fixed bottom-6 right-6 bg-secondary text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all z-50" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+    </button>
+    
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('pageSetup', () => ({
+                showBackToTop: false,
+                init() {
+                    window.addEventListener('scroll', () => {
+                        this.showBackToTop = (window.scrollY > window.innerHeight * 0.6);
+                    });
+                },
+                stock: 0,
+                init() {
+                    let initialStock = localStorage.getItem('lançaflash_stock');
+                    if (initialStock === null || isNaN(initialStock) || parseInt(initialStock) <= 1) {
+                        initialStock = 100;
+                        localStorage.setItem('lançaflash_stock', initialStock);
+                    }
+                    const decrement = Math.floor(Math.random() * 3) + 1;
+                    let currentStock = parseInt(initialStock) - decrement;
+                    if (currentStock < 15) { // Para não zerar rápido demais
+                        currentStock = 15 + Math.floor(Math.random() * 5);
+                    }
+                    this.stock = currentStock;
+                    localStorage.setItem('lançaflash_stock', currentStock);
+                }
+            }));
+
+            Alpine.data('countdown', () => ({
+                endDate: null,
+                days: '00',
+                hours: '00',
+                minutes: '00',
+                seconds: '00',
+                init() {
+                    let storedEndDate = localStorage.getItem('lançaflash_countdown_end');
+                    if (!storedEndDate) {
+                        storedEndDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+                        localStorage.setItem('lançaflash_countdown_end', storedEndDate);
+                    }
+                    this.endDate = new Date(storedEndDate);
+                    this.updateTime();
+                    setInterval(() => {
+                        this.updateTime();
+                    }, 1000);
+                },
+                updateTime() {
+                    const now = new Date();
+                    const diff = this.endDate.getTime() - now.getTime();
+
+                    if (diff <= 0) {
+                        this.days = this.hours = this.minutes = this.seconds = '00';
+                        return;
+                    }
+
+                    this.days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                    this.hours = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                    this.minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                    this.seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+                }
+            }));
+            
+            Alpine.data('carousel', () => ({
+                currentSlide: 0,
+                totalSlides: 3,
+                interval: null,
+                init() {
+                    this.startAutoplay();
+                },
+                startAutoplay() {
+                    this.interval = setInterval(() => {
+                        this.next();
+                    }, 8000);
+                },
+                stopAutoplay() {
+                    clearInterval(this.interval);
+                    this.interval = null;
+                },
+                next() {
+                    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                },
+                prev() {
+                    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                }
+            }));
+        });
+    </script>
+
+</body>
+</html>
